@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Thala 7.</title>
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+  <div class="checkout">
+    <!-- ===== Left: form ===== -->
+    <div class="checkout-left">
+      <a href="cart.html" class="step-label">Checkout</a>
+
+      <!-- Contact -->
+      <h2 class="section-title">Contact Details</h2>
+      <div class="field">
+        <label>Email ID</label>
+        <input type="email" placeholder="John Doe" />
+      </div>
+
+      <!-- Payment -->
+      <h2 class="section-title">Payment</h2>
+      <div class="payment-card">
+        <div class="methods">
+          <button class="method active">
+            <span class="m-icon">&#128179;</span>
+            <span>Card</span>
+          </button>
+          <button class="method">
+            <span class="m-icon">&#8383;</span>
+            <span>Crypto</span>
+          </button>
+          <button class="method">
+            <span class="m-icon">&#127974;</span>
+            <span>Bank</span>
+          </button>
+        </div>
+
+        <div class="field">
+          <label>Card Number</label>
+          <input type="text" placeholder="John Doe" />
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label>Expiry</label>
+            <input type="text" placeholder="MM/YY" />
+          </div>
+          <div class="field">
+            <label>CVC</label>
+            <input type="password" placeholder="&bull;&bull;&bull;" />
+          </div>
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label>Country</label>
+            <select>
+              <option>India</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>ZIP</label>
+            <input type="text" placeholder="XXXXX" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Right: order summary ===== -->
+    <div class="checkout-right">
+      <h2 class="summary-title">Order Summary</h2>
+
+      <div class="summary-card">
+        <label class="coupon-label">Enter Coupon Code</label>
+        <div class="coupon-row">
+          <input type="text" placeholder="COUPON CODE" />
+          <button class="apply-btn">Apply Coupon</button>
+        </div>
+
+        <div class="summary-line">
+          <span>Sub Total</span>
+          <span>&#8377;4,700</span>
+        </div>
+        <div class="summary-line">
+          <span>Taxes(if applicable)</span>
+          <span>&#8377;199</span>
+        </div>
+        <div class="summary-line">
+          <span>Discount</span>
+          <span>&#8377;0</span>
+        </div>
+        <div class="summary-line total">
+          <span>Total</span>
+          <span>&#8377;4,999</span>
+        </div>
+      </div>
+
+      <button class="pay-btn">Pay Now <strong>&#8377;4,999</strong></button>
+
+      <div class="trust-badges">
+        <span class="badge secure">&#128274; SECURE<br /><small>SSL ENCRYPTED</small></span>
+        <span class="badge razor"><em>Razorpay</em></span>
+        <span class="badge secure2">&#10004; SECURE<br /><small>PAYMENT</small></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

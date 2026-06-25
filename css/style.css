@@ -1,0 +1,256 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
+  color: #2b2b34;
+}
+
+/* The whole page with the faint vertical stripes behind everything */
+.page {
+  position: relative;
+  min-height: 100vh;
+  /* subtle vertical stripes */
+  background-image: repeating-linear-gradient(
+    to right,
+    #faf7f4 0px,
+    #faf7f4 70px,
+    #ffffff 70px,
+    #ffffff 140px
+  );
+  overflow: hidden;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 48px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2b2b34;
+}
+
+.logo span {
+  color: #ff8a00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4a4a55;
+  font-size: 15px;
+}
+
+.nav-links a.active {
+  color: #2b2b34;
+  font-weight: 600;
+}
+
+.caret {
+  font-size: 11px;
+  color: #9a9aa3;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e6e2dd;
+  border-radius: 24px;
+  padding: 9px 16px;
+  width: 220px;
+}
+
+.search-icon {
+  font-size: 13px;
+  color: #9a9aa3;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  background: transparent;
+}
+
+.bag-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid #e6e2dd;
+  border-radius: 24px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #2b2b34;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #cfcfd6
+    url("https://i.pravatar.cc/80?img=12")
+    center / cover no-repeat;
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 48px 60px;
+}
+
+.hero-left {
+  max-width: 460px;
+}
+
+.brand-mark {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #1c1c24;
+  margin-bottom: 18px;
+}
+
+.brand-mark .v {
+  display: inline-block;
+  transform: scaleX(-1);
+  color: #1f9bd6;
+}
+
+.hero-title {
+  font-size: 58px;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #2b2b34;
+  margin-bottom: 22px;
+}
+
+.hero-title .orange {
+  color: #ff8a00;
+}
+
+.hero-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6f6f78;
+  margin-bottom: 32px;
+}
+
+.shop-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #2b2b34;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.shop-btn:hover {
+  background: #15151b;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shoe-img {
+  width: 520px;
+  max-width: 100%;
+  transform: rotate(-8deg);
+}
+
+/* ===== Stats bar ===== */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ff8a00;
+  color: #ffffff;
+  padding: 26px 48px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-icon {
+  font-size: 30px;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.stat-text strong {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.stat-text span {
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .nav-links,
+  .search-box {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 200px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
